@@ -1,0 +1,195 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: plum;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.searchBarContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.trialSearchBar {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 4px;
+  min-width: 300px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.trialSearchBar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: darkmagenta;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover:not(:disabled) {
+  background-color: #555;
+}
+
+.searchButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.searchPopup {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: transparent;
+  border-radius: 8px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.searchResultsHeader {
+  text-align: left;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.trialsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trialCard {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trialCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.trialId {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.trialStatus {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.trialSummary {
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.trialLink {
+  color: darkmagenta;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.trialLink:hover {
+  color: #8b008b;
+}
+
+.viewTrialLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: darkmagenta;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid darkmagenta;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.viewTrialLink:hover {
+  background-color: darkmagenta;
+  color: white;
+}
+
+.totalCount {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border: 1px solid #d32f2f;
+}

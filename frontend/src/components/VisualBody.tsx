@@ -11,8 +11,8 @@ const VisualBody = () => {
 
     const organs = [
         { id: 'brain', name: 'Brain', x: 150, y: 50, r: 35, color: '#FFB6C1' },
-        { id: 'lungs', name: 'Lungs', x: 150, y: 130, r: 40, color: '#87CEEB' },
-        { id: 'heart', name: 'Heart', x: 150, y: 130, r: 20, color: '#FF69B4' }, // Overlapping lungs slightly
+        { id: 'lungs', name: 'Lungs', x: 140, y: 130, r: 40, color: '#87CEEB' },
+        { id: 'heart', name: 'Heart', x: 170, y: 130, r: 20, color: '#FF69B4' }, // Overlapping lungs slightly
         { id: 'liver', name: 'Liver', x: 130, y: 190, r: 25, color: '#CD853F' },
         { id: 'stomach', name: 'Stomach', x: 170, y: 190, r: 25, color: '#FFDAB9' },
         { id: 'kidneys', name: 'Kidneys', x: 150, y: 230, r: 20, color: '#DDA0DD' },

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../App.css';
 
 interface UserProfile {
@@ -32,6 +32,18 @@ const Profile = () => {
 
     const [saved, setSaved] = useState(false);
 
+    // Hook to get the user's name and other info from local storage
+    useEffect(() => {
+        const savedProfile = localStorage.getItem('userProfile');
+        const savedQuestionnaire = localStorage.getItem('userQuestionnaire');
+        if (savedProfile) {
+            setProfile(JSON.parse(savedProfile));
+        }
+        if (savedQuestionnaire) {
+            setQuestionnaire(JSON.parse(savedQuestionnaire));
+        }
+    }, []);
+
     const handleProfileChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setProfile(prev => ({ ...prev, [name]: value }));
@@ -45,14 +57,19 @@ const Profile = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Submitting Profile:', { profile, questionnaire });
-        // Logic to save data or fetch personalized trials would go here
+
+        // Save to local storage
+        localStorage.setItem('userProfile', JSON.stringify(profile));
+        localStorage.setItem('userQuestionnaire', JSON.stringify(questionnaire));
+
         setSaved(true);
         setTimeout(() => setSaved(false), 3000);
     };
 
     return (
         <div>
-            <h3>Your Profile</h3>
+            {/* Display User's name if available, otherwise 'Profile' */}
+            <h3>{profile.name || 'Profile'}</h3>
 
             <div className="searchBarContainer" style={{ flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
                 <form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -124,7 +141,7 @@ const Profile = () => {
 
                     {/* Questionnaire Section */}
                     <div className="trialCard" style={{ textAlign: 'left' }}>
-                        <h3>Health Questionnaire</h3>
+                        <h3>Questionnaire</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div>
                                 <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Primary Medical Condition / Interest:</label>

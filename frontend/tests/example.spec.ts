@@ -11,6 +11,6 @@ test('has body', async ({ page }) => {
     await page.goto('/visual');
 
     // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Interactive Body Search/);
+    await expect(page).toHaveTitle(/Trial Hero/);
 });
 

@@ -64,11 +64,7 @@ const Home = () => {
 
             </div>
 
-            <div style={{ marginTop: '20px', textAlign: 'center' }}>
-                <Link to="/visual" className="visualLink" style={{ color: '#646cff', textDecoration: 'none', fontSize: '1.1em' }}>
-                    Try Visual Body Search →
-                </Link>
-            </div>
+÷
 
             {showPopup && (
                 <div className="searchPopup">

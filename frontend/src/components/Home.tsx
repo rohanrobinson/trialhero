@@ -63,8 +63,6 @@ const Home = () => {
 
             </div>
 
-÷
-
             {showPopup && (
                 <div className="searchPopup">
                     {loading && <p>Loading trials...</p>}

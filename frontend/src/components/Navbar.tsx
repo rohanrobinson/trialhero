@@ -16,6 +16,12 @@ const Navbar = () => {
                     Visual Body Search
                 </NavLink>
                 <NavLink
+                   to="/profile"
+                   className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                >
+                   Profile
+                </NavLink>
+                <NavLink
                     to="/bookmarks"
                     className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                 >

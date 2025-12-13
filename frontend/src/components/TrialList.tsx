@@ -45,18 +45,11 @@ const TrialList = ({ trials, lastQuery }: TrialListProps) => {
 
                     return (
                         <div key={trial.nctId} className="trialCard">
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <h3>{trial.title}</h3>
                                 <button
                                     onClick={() => handleBookmarkClick(study)}
-                                    style={{
-                                        background: 'none',
-                                        border: 'none',
-                                        cursor: 'pointer',
-                                        fontSize: '1.5rem',
-                                        padding: '0 0 0 10px',
-                                        color: bookmarked ? '#FFD700' : '#ccc'
-                                    }}
+                                    className={`bookmarkButton ${bookmarked ? 'bookmarked' : ''}`}
                                     aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
                                 >
                                     {bookmarked ? '★' : '☆'}

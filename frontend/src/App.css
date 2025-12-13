@@ -254,3 +254,24 @@ h1 {
 h3 {
   margin-top: 0.5rem;
 }
+
+.bookmarkButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0;
+  color: black;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.bookmarkButton:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+.bookmarkButton.bookmarked {
+  color: #FFD700;
+  -webkit-text-stroke: 1px black;
+}

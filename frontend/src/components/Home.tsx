@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { searchClinicalTrials, type Study } from '../api/getClinicalTrial';
 import TrialList from './TrialList';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [searchQuery, setSearchQuery] = useState('');

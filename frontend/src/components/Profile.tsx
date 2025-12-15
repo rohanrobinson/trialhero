@@ -75,7 +75,7 @@ const Profile = () => {
                 <form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
                     {/* Basic Information Section */}
-                    <div className="trialCard" style={{ textAlign: 'left' }}>
+                    <div className="trialCard" style={{ textAlign: 'left', backgroundColor: saved ? 'plum' : undefined, transition: 'background-color 0.3s' }}>
                         <h3>Basic Information</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div>
@@ -98,7 +98,7 @@ const Profile = () => {
                                         type="number"
                                         name="age"
                                         className="trialSearchBar"
-                                        style={{ width: '100%', boxSizing: 'border-box' }}
+                                        style={{ width: '100%', boxSizing: 'border-box', minWidth: 0 }}
                                         value={profile.age}
                                         onChange={handleProfileChange}
                                         placeholder="30"
@@ -110,7 +110,7 @@ const Profile = () => {
                                     <select
                                         name="gender"
                                         className="trialSearchBar"
-                                        style={{ width: '100%', boxSizing: 'border-box' }}
+                                        style={{ width: '100%', boxSizing: 'border-box', minWidth: 0 }}
                                         value={profile.gender}
                                         onChange={handleProfileChange}
                                         required
@@ -140,7 +140,7 @@ const Profile = () => {
                     </div>
 
                     {/* Questionnaire Section */}
-                    <div className="trialCard" style={{ textAlign: 'left' }}>
+                    <div className="trialCard" style={{ textAlign: 'left', backgroundColor: saved ? 'plum' : undefined, transition: 'background-color 0.3s' }}>
                         <h3>Questionnaire</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div>

@@ -1,22 +1,25 @@
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem 2rem 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
   background-color: darkmagenta;
-  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  bottom: 0;
+  width: 250px;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .navbar-brand .nav-logo {
@@ -28,7 +31,11 @@
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  text-align: left;
 }
 
 .nav-link {
@@ -49,9 +56,10 @@
   font-weight: bold;
 }
 
-/* Adjust main content padding to account for fixed navbar */
+/* Adjust main content padding to account for fixed sidebar */
 body {
-  padding-top: 80px;
+  padding-left: 250px;
+  padding-top: 0;
 }
 
 
